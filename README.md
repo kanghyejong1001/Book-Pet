@@ -36,7 +36,7 @@ bookReportList.dart == '후기 게시판';
 
 bookMeetingList.dart == '독서 모임 목록';
 
-bookMeetingInfo.dart == '독서 모임 정보';
+bookMeetingInfo.dart == '독서 모임 정보';(송수민)
 
 createBookMeeting.dart == '독서 모임 생성';
 
