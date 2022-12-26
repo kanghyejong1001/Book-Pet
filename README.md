@@ -12,7 +12,7 @@ git clone 이후 이 레포 자체를 안드로이드 스튜디오로 여는 게
 
 <페이지 가이드>
 
-genreChoice.dart == '취향선택';
+genreChoice.dart == '취향선택'; (안상준)
 
 home.dart == '홈페이지';
 
