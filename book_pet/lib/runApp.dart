@@ -12,7 +12,7 @@ class RunApp extends StatelessWidget {
       title: 'Book-Pet',
       initialRoute: '/login',
       routes: {
-        '/login': (BuildContext context) => const Login(title: 'Book-Pet'),
+        '/login': (BuildContext context) => const Login(),
 
         '/': (BuildContext context) => const Home(title: 'Book-Pet Home Page'),
       },
@@ -32,4 +32,3 @@ class RunApp extends StatelessWidget {
     );
   }
 }
-
