@@ -15,6 +15,8 @@ class RunApp extends StatelessWidget {
         '/login': (BuildContext context) => const Login(title: 'Book-Pet'),
 
         '/': (BuildContext context) => const Home(title: 'Book-Pet Home Page'),
+
+        // '/menu': (BuildContext context) => const Menu(title: 'Book-Pet Menu'),
       },
       theme: ThemeData(
         // This is the theme of your application.
