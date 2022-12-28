@@ -29,6 +29,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  group_button: ^5.2.2
+  http: ^0.12.0
   flutter:
     sdk: flutter
 
@@ -38,6 +40,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.4.0
   cloud_firestore: ^4.3.0
+  firebase_auth: ^0.20.1
+
 
 dev_dependencies:
   flutter_test:
