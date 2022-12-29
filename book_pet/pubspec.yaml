@@ -44,6 +44,7 @@ dependencies:
 
 
 
+
 #  firebase_auth: ^0.20.1
 
 
@@ -77,6 +78,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
 
   assets:
+
   #  - assets/images/you.png
     - assets/images/seine.png
   #  - assets/images/christmas.png
@@ -85,7 +87,6 @@ flutter:
     - assets/images/google_logo.png
     - assets/images/gildong.png
     - assets/images/Angelique.jpeg
-
   # assets:
   #   - assets/images/abc.png
 

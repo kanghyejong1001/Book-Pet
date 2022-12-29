@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -8,9 +7,9 @@ import 'login.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'menu.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'login.dart';
+
 
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 
@@ -19,7 +18,6 @@ class Book{
 
   Book(this.name);
 }
-
 
 class Home extends StatefulWidget {
   const Home({super.key, required this.title});
@@ -37,11 +35,6 @@ class _HomeState extends State<Home> {
   void _incrementCounter() {
     setState(() {
       _counter++;
-      firestore.collection('user').add({
-        'email': "a",
-        'name': "a",
-        'ID': "a",
-      });
     });
   }
 
@@ -67,11 +60,9 @@ class _HomeState extends State<Home> {
   }
 
   TextEditingController controller = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // // appBar: AppBar(
       // //   centerTitle: false,
       // //   // leading widget of appBar: one widget should follow

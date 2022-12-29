@@ -10,16 +10,18 @@ AppBar buildAppBar(BuildContext context) {
   final icon = CupertinoIcons.moon_stars;
 
   return AppBar(
-    leading: BackButton(),
+    leading: BackButton(
+      color: Color.fromARGB(255, 187, 129, 255),
+    ),
     backgroundColor: Colors.transparent,
     elevation: 0,
     actions: [
       ThemeSwitcher(
         builder: (context) => IconButton(
+          color: Color.fromARGB(255, 187, 129, 255),
           icon: Icon(icon),
           onPressed: () {
             final theme = isDarkMode ? MyThemes.lightTheme : MyThemes.darkTheme;
-
             final switcher = ThemeSwitcher.of(context)!;
             switcher.changeTheme(theme: theme);
           },
