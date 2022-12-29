@@ -27,7 +27,7 @@ class ProfileWidget extends StatelessWidget {
             right: 4,
             child: buildEditIcon(color),
           ),
-        ],
+        ]
       ),
     );
   }

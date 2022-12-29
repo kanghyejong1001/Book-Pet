@@ -25,18 +25,39 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text("Book-Pet"),
       ),
-      body: Center(
-        child: Row(
+      body: Padding(
+        padding: EdgeInsets.all(50.0),
+        child: Column(
+
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/images/google_logo.png'),
-            TextButton(
-              child: Text("Google Login", style: TextStyle(fontSize: 25),),
-              onPressed:signInWithGoogle,
-            ),
+          children: [
+
+            Container(
+              height: 65,
+              child: ElevatedButton(
+                  onPressed: signInWithGoogle,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset('assets/images/glogo.png'),
+                      Text('Login with Google',
+                        style: TextStyle(color: Colors.black87, fontSize: 18.0),
+                      ),
+                      Opacity(
+                        opacity: 0.0,
+                        child: Image.asset('assets/images/glogo.png'),
+                    ),
+                  ],
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                ),
+              ),
+            )
           ],
         ),
       ),
