@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -8,18 +7,10 @@ import 'login.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'menu.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'login.dart';
 
-FirebaseFirestore firestore = FirebaseFirestore.instance;
-
-class BookList{
-  Object? name;
-
-  BookList(this.name);
-}
-
+import 'menu.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key, required this.title});
@@ -31,46 +22,16 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _counter = 0;
-  
-  
+
   void _incrementCounter() {
     setState(() {
       _counter++;
-      firestore.collection('user').add({
-        'email': "a",
-        'name': "a",
-        'ID': "a",
-      });
     });
   }
-
-  Stream<List<BookList>> streamBookList(){
-    try{
-      //찾고자 하는 컬렉션의 스냅샷(Stream)을 가져온다.
-      final Stream<QuerySnapshot> snapshots = firestore.collection('user').snapshots();
-
-      //새낭 스냅샷(Stream)내부의 자료들을 List<MessageModel> 로 변환하기 위해 map을 사용하도록 한다.
-      //참고로 List.map()도 List 안의 element들을 원하는 형태로 변환하여 새로운 List로 반환한다
-      return snapshots.map((querySnapshot){
-        List<BookList> bookList = [];//querySnapshot을 message로 옮기기 위해 List<MessageModel> 선언
-        querySnapshot.docs.forEach((element) { //해당 컬렉션에 존재하는 모든 docs를 순회하며 messages 에 데이터를 추가한다.
-          bookList.add(BookList(element.data()));
-
-          });
-        return bookList; //QuerySnapshot에서 List<MessageModel> 로 변경이 됐으니 반환
-      }); //Stream<QuerySnapshot> 에서 Stream<List<MessageModel>>로 변경되어 반환됨
-    }catch(ex){//오류 발생 처리
-      log('error)',error: ex.toString(),stackTrace: StackTrace.current);
-      return Stream.error(ex.toString());
-    }
-  }
-
-  TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // // appBar: AppBar(
       // //   centerTitle: false,
       // //   // leading widget of appBar: one widget should follow
@@ -259,102 +220,6 @@ class _HomeState extends State<Home> {
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-
     );
   }
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   // This method is rerun every time setState is called, for instance as done
-  //   // by the _incrementCounter method above.
-  //   //
-  //   // The Flutter framework has been optimized to make rerunning build methods
-  //   // fast, so that you can just rebuild anything that needs updating rather
-  //   // than having to individually change instances of widgets.
-  //   return Scaffold(
-  //     appBar: AppBar(
-  //       // Here we take the value from the MyHomePage object that was created by
-  //       // the App.build method, and use it to set our appbar title.
-  //       leading: IconButton(
-  //         icon: const Icon(
-  //           Icons.menu,
-  //           semanticLabel: 'menu',
-  //         ),
-  //         onPressed: (){
-  //           Navigator.push(context, MaterialPageRoute(builder: (context) => const Login(title: 'login')));
-  //         },
-  //       ),
-  //       title: Text(widget.title),
-  //     ),
-  //     body:
-  //     StreamBuilder<List<BookList>>(
-  //       // stream: firestore.collection('user').snapshots(),
-  //       stream: streamBookList(),
-  //       builder: (context, snapshot) {
-  //         return Container(
-  //           // Center is a layout widget. It takes a single child and positions it
-  //           // in the middle of the parent.
-  //           //   child: Column(
-  //           //     children: [
-  //           //       Expanded(
-  //           //           child: ListView.builder(
-  //           //             scrollDirection: Axis.horizontal,
-  //           //               itemCount: snapshot.data?.length,
-  //           //               itemBuilder: (context, index){
-  //           //                 return ListTile(
-  //           //                   title: Text(snapshot.toString()),
-  //           //                 );
-  //           //               }
-  //           //           ),
-  //           //       ),
-  //           //     ],
-  //           //   ),
-  //             // Column is also a layout widget. It takes a list of children and
-  //             // arranges them vertically. By default, it sizes itself to fit its
-  //             // children horizontally, and tries to be as tall as its parent.
-  //             //
-  //             // Invoke "debug painting" (press "p" in the console, choose the
-  //             // "Toggle Debug Paint" action from the Flutter Inspector in Android
-  //             // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-  //             // to see the wireframe for each widget.
-  //             //
-  //             // Column has various properties to control how it sizes itself and
-  //             // how it positions its children. Here we use mainAxisAlignment to
-  //             // center the children vertically; the main axis here is the vertical
-  //             // axis because Columns are vertical (the cross axis would be
-  //             // horizontal).
-  //           //   (
-  //           //     mainAxisAlignment: MainAxisAlignment.center,
-  //           //     children: <Widget>[
-  //           //     // Text('${snapshot.data?.docs[1].data()}'),
-  //           //     // ListView.builder(
-  //           //     //   itemCount: snapshot.data?.size,
-  //           //     //   itemBuilder: (BuildContext context, int index){
-  //           //     //     return Container(
-  //           //     //       height: 50,
-  //           //     //       child: Center(child: Text('${snapshot.data?.docs[index].id}'),),
-  //           //     //     );
-  //           //     //   },
-  //           //     // ),
-  //           //     const Text(
-  //           //       'You have pushed the button this many times:',
-  //           //     ),
-  //           //     Text(
-  //           //       '$_counter',
-  //           //       style: Theme.of(context).textTheme.headline4,
-  //           //     ),
-  //           //   ],
-  //           // );
-  //         );
-  //       },
-  //       ),
-  //     floatingActionButton: FloatingActionButton(
-  //       onPressed: _incrementCounter,
-  //       tooltip: 'Increment',
-  //
-  //       child: const Icon(Icons.add),
-  //     ),
-  //     // This trailing comma makes auto-formatting nicer for build methods.
-  //   );
-  // }
 }
