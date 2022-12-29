@@ -2,6 +2,9 @@ import 'package:book_pet/bookInfo.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'login.dart';
+import 'menu.dart';
+import 'bookMeetingList.dart';
+
 
 import 'menu.dart';
 import 'bookList.dart';
@@ -15,15 +18,19 @@ class RunApp extends StatelessWidget {
     return MaterialApp(
       title: 'Book-Pet',
 
-      initialRoute: '/home',
+      initialRoute: '/',
+
 
       routes: {
         '/login': (BuildContext context) => const Login(),
 
         '/': (BuildContext context) => const Home(title: 'Book-Pet Home Page'),
 
-        '/home': (BuildContext context) => const Home(title: '',),
-        //'/menu':(BuildContext context) => const Menu(title: 'Book-Pet menu')
+
+        // '/menu': (BuildContext context) => const Menu(title: 'Book-Pet menu'),
+
+        '/bookMeetingList': (BuildContext context) => const BookMeetingList(),
+
       },
       theme: ThemeData(
 

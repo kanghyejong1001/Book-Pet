@@ -2,8 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/rendering/box.dart';
 
 
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home:Scaffold(
+//         appBar: AppBar(
+//           backgroundColor: Colors.purple.shade200,
+//           title: Text('책 정보'),
+//           leading: IconButton(
+//             icon: const Icon(
+//               Icons.menu,
+//               semanticLabel: 'menu',
+//             ),
+//             onPressed: (){
+//               // Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));
+//             },
+//           ),
+//         ),
+//         body: const bookInfo(title: 'Flutter Demo Home Page'),
+//       ),
+//     );
+//   }
+// }
+
+
+
 class BookInfo extends StatefulWidget{
   const BookInfo({super.key, required this. title});
+
 
   final String title;
 
@@ -12,7 +43,9 @@ class BookInfo extends StatefulWidget{
 
 }
 
+
 class _BookInfoState extends State<BookInfo>{
+
   @override
   Widget build(BuildContext context) {
     EdgeInsets TopMargin = const EdgeInsets.only(top: 100);
