@@ -33,12 +33,14 @@ class DefaultFirebaseOptions {
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
+
           'you can reconfigure this by running the FlutterFire CLI again.',
 
         );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
+
           'you can reconfigure this by running the FlutterFire CLI again.',
 
         );
@@ -73,7 +75,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '915730822786',
     projectId: 'book-pet-3eec4',
     storageBucket: 'book-pet-3eec4.appspot.com',
-    androidClientId: '915730822786-ev33tdc8n1re1r274ejltf1h9qaj2004.apps.googleusercontent.com',
 
     iosClientId: '915730822786-2nq51s5ecrqbvsivu69jdvqudprfr6i3.apps.googleusercontent.com',
     iosBundleId: 'com.example.bookPet',
@@ -85,10 +86,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '915730822786',
     projectId: 'book-pet-3eec4',
     storageBucket: 'book-pet-3eec4.appspot.com',
-
-
-    androidClientId: '915730822786-ev33tdc8n1re1r274ejltf1h9qaj2004.apps.googleusercontent.com',
-
     iosClientId: '915730822786-2nq51s5ecrqbvsivu69jdvqudprfr6i3.apps.googleusercontent.com',
     iosBundleId: 'com.example.bookPet',
   );
