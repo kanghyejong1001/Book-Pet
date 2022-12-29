@@ -1,72 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Book {
-  final String image;
-  final String name;
-  final String tag;
-  final String author;
-  final String genre;
-  final String star;
-  final String aline;
-
-  Book(this.image, this.name, this.tag, this.author, this.genre, this.star, this.aline);
-}
-
-var book = [];
-
-class BookTitle extends StatelessWidget {
-  const BookTitle(this._book);
-
-  final Book _book;
-
-  @override
-  Widget build(BuildContext context) {
-    // return Scaffold(
-    //   body: Column (
-    //     children: <Widget> [
-    //       Row (
-    //         children: [
-    //           // Image(
-    //           //   image: NetworkImage("http://image.yes24.com/goods/116208935/XL"),
-    //           // ),
-    //           Column (
-    //             children: [
-    //               Text(_book.name),
-    //             ],
-    //           )
-    //         ],
-    //       )
-    //     ],
-    //   )
-    // );
-    return ListTile (
-      //visualDensity: VisualDensity(vertical: 4),
-      leading: ConstrainedBox(
-        constraints: BoxConstraints(
-          maxWidth: 100,
-          maxHeight: 800,
-        ),
-       child: Image.network(_book.image,fit: BoxFit.fill),
-        // width: 100,
-        // height: 300,
-        // //
-        //
-      ),
-      title: Text("\n"+_book.name),
-
-      subtitle: Text("\n작가 : ${_book.author}\n장르 : ${_book.genre}\n별점 : ${_book.star}\n"),
-      onTap: () {
-        print("pressed");
-      },
-      // subtitle: Text("${_person.age}세"),
-      // trailing: PersonHandIcon(_person.isLeftHand),
-    );
-  }
-}
-
 class BookList extends StatefulWidget {
   const BookList({super.key});
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -98,21 +33,240 @@ class _HomePageState extends State<BookList> {
             }
         ),
       ),
-      // body: ListView(
-      //   padding: const EdgeInsets.all(8),
-      //   children: <Widget> [
-      //     BookTitle(Book("http://image.yes24.com/goods/116208935/XL","안젤리크","#사랑 #죽음","기욤 뮈소","액션","★★★★☆",'"젋다는 것 만큼 외로운 것도 없지')),
-      //     BookTitle(Book("http://image.yes24.com/goods/116208935/XL","안젤리크","#사랑 #죽음","기욤 뮈소","액션","★★★★☆",'"젋다는 것 만큼 외로운 것도 없지')),
-      //   ],
-      // ),
-      // body: Column (
-      //   children: [
-      //     Container (
-      //       height: 100,
-      //       child: ListView.builder,
-      //     )
-      //   ],
-      // )
+     body: SingleChildScrollView(
+         child: Column (
+           children: <Widget> [
+             Padding(
+               padding: const EdgeInsets.all(12),
+               child: ElevatedButton (
+                 onPressed: () {
+                   print("pressed");
+                 },
+                 style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                 child: Row (
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: <Widget> [
+                     Image.network("http://image.yes24.com/goods/116208935/XL",
+                       width: 150,
+                       height: 220,
+                       fit: BoxFit.fill,
+                     ),
+                     Padding(
+                       padding: const EdgeInsets.all(12),
+                       child: Column (
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: const <Widget> [
+                           Text (
+                             "안젤리크\n",
+                             style: TextStyle (
+                               fontSize: 30,
+                             ),
+                           ),
+                           Text (
+                             "작가 : 기욤 뮈소",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "장르 : 액션",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "별점 : ★★★★☆",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                             style: TextStyle (
+                               fontSize: 13,
+                             ),
+                           ),
+                         ],
+                       ),
+                     )
+                   ],
+                 ),
+               ),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(12),
+               child: ElevatedButton (
+                 onPressed: () {
+                   print("pressed");
+                 },
+                 style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                 child: Row (
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: <Widget> [
+                     Image.network("http://image.yes24.com/goods/116208935/XL",
+                       width: 150,
+                       height: 220,
+                       fit: BoxFit.fill,
+                     ),
+                     Padding(
+                       padding: const EdgeInsets.all(12),
+                       child: Column (
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: const <Widget> [
+                           Text (
+                             "안젤리크\n",
+                             style: TextStyle (
+                               fontSize: 30,
+                             ),
+                           ),
+                           Text (
+                             "작가 : 기욤 뮈소",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "장르 : 액션",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "별점 : ★★★★☆",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                             style: TextStyle (
+                               fontSize: 13,
+                             ),
+                           ),
+                         ],
+                       ),
+                     )
+                   ],
+                 ),
+               ),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(12),
+               child: ElevatedButton (
+                 onPressed: () {
+                   print("pressed");
+                 },
+                 style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                 child: Row (
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: <Widget> [
+                     Image.network("http://image.yes24.com/goods/116208935/XL",
+                       width: 150,
+                       height: 220,
+                       fit: BoxFit.fill,
+                     ),
+                     Padding(
+                       padding: const EdgeInsets.all(12),
+                       child: Column (
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: const <Widget> [
+                           Text (
+                             "안젤리크\n",
+                             style: TextStyle (
+                               fontSize: 30,
+                             ),
+                           ),
+                           Text (
+                             "작가 : 기욤 뮈소",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "장르 : 액션",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "별점 : ★★★★☆",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                             style: TextStyle (
+                               fontSize: 13,
+                             ),
+                           ),
+                         ],
+                       ),
+                     )
+                   ],
+                 ),
+               ),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(12),
+               child: ElevatedButton (
+                 onPressed: () {
+                   print("pressed");
+                 },
+                 style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                 child: Row (
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: <Widget> [
+                     Image.network("http://image.yes24.com/goods/116208935/XL",
+                       width: 150,
+                       height: 220,
+                       fit: BoxFit.fill,
+                     ),
+                     Padding(
+                       padding: const EdgeInsets.all(12),
+                       child: Column (
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                         children: const <Widget> [
+                           Text (
+                             "안젤리크\n",
+                             style: TextStyle (
+                               fontSize: 30,
+                             ),
+                           ),
+                           Text (
+                             "작가 : 기욤 뮈소",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "장르 : 액션",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             "별점 : ★★★★☆",
+                             style: TextStyle (
+                               fontSize: 20,
+                             ),
+                           ),
+                           Text (
+                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                             style: TextStyle (
+                               fontSize: 13,
+                             ),
+                           ),
+                         ],
+                       ),
+                     )
+                   ],
+                 ),
+               ),
+             ),
+           ],
+         )
+     ),
     );
   }
 }
