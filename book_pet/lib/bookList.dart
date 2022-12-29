@@ -36,6 +36,7 @@ class _BookListState extends State<BookList> {
             icon: const Icon(Icons.menu),
             color: Colors.black,
             onPressed: () {
+              Navigator.pushNamed(context, '/menu');
             }
         ),
       ),
@@ -45,18 +46,12 @@ class _BookListState extends State<BookList> {
              Padding(
                padding: const EdgeInsets.all(12),
                child: ElevatedButton (
-                 onPressed: () {
-                   Navigator.push(
-                     context,
-                     MaterialPageRoute(builder: (context) => const BookInfo(title: '',)),
-                   );
-
-                 },
+                 onPressed: () => Navigator.pushNamed(context, '/bookInfo'),
                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
                  child: Row (
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: <Widget> [
-                     Image.network("http://image.yes24.com/goods/116208935/XL",
+                     Image.network("https://contents.kyobobook.co.kr/pdt/9788984374546.jpg",
                        width: 150,
                        height: 220,
                        fit: BoxFit.fill,

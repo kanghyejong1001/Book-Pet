@@ -1,15 +1,17 @@
-import 'package:book_pet/bookInfo.dart';
-
-import 'package:book_pet/bookList.dart';
-import 'package:book_pet/profilePage.dart';
-
 import 'package:flutter/material.dart';
+
+import 'menu.dart';
+
 import 'home.dart';
 import 'login.dart';
-import 'menu.dart';
-import 'bookMeetingList.dart';
-import 'menu.dart';
+import 'profilePage.dart';
+import 'myLibrary.dart';
+
 import 'bookList.dart';
+import 'bookInfo.dart';
+
+import 'bookMeetingList.dart';
+import 'bookMeetingInfo.dart';
 
 
 class RunApp extends StatelessWidget {
@@ -20,26 +22,30 @@ class RunApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Book-Pet',
-      initialRoute: '/bookMeetingList',
 
-
-
+      initialRoute: '/',
 
       routes: {
         '/menu': (BuildContext context) => const Menu(title: 'Menu'),
         '/': (BuildContext context) => const Home(title: 'Book-Pet Home Page'),
-        '/profile': (BuildContext context) => const ProfilePage(),
-        '/menu/profile': (BuildContext context) => const ProfilePage(),
+        '/login': (BuildContext context) => const Login(),
 
-        // '/menu': (BuildContext context) => const Menu(title: 'Book-Pet menu'),
+        '/profile': (BuildContext context) => const ProfilePage(),
+        '/myLibrary': (BuildContext context) => const MyLibrary(),
+
+        '/bookList': (BuildContext context) => const BookList(),
+        '/bookInfo': (BuildContext context) => const BookInfo(),
 
         '/bookMeetingList': (BuildContext context) => const BookMeetingList(),
+
         '/bookList': (BuildContext context) => const BookList(),
+
+        '/bookMeetingInfo': (BuildContext context) => const BookMeetingInfo(),
+
 
       },
       theme: ThemeData(
-
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightGreen,
       ),
     );
   }

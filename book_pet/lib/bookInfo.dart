@@ -24,25 +24,20 @@ import 'package:flutter/src/rendering/box.dart';
 //             },
 //           ),
 //         ),
+
 //         body: const bookInfo(title: 'Flutter Demo Home Page'),
 //       ),
 //     );
 //   }
 // }
 
-
-
-class BookInfo extends StatefulWidget{
-  const BookInfo({super.key, required this. title});
-
-
-  final String title;
+class BookInfo extends StatefulWidget {
+  const BookInfo({super.key,});
 
   @override
   State<StatefulWidget> createState() => _BookInfoState();
 
 }
-
 
 class _BookInfoState extends State<BookInfo>{
 

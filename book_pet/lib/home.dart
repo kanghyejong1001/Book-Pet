@@ -2,12 +2,10 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'login.dart';
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'menu.dart';
+
 import 'login.dart';
 
 
@@ -253,6 +251,7 @@ class _HomeState extends State<Home> {
             icon: const Icon(Icons.menu),
             color: Colors.black,
             onPressed: () {
+              Navigator.pushNamed(context, '/menu');
             }
         ),
       ),
@@ -286,7 +285,8 @@ class _HomeState extends State<Home> {
                   children: <Widget> [
                     GestureDetector(
                       child: Image.network(
-                          "http://image.yes24.com/goods/116208935/XL",
+                        '',
+                          // "http://image.yes24.com/goods/116208935/XL",
                           width: 150,
                           height: 220,
                           fit: BoxFit.fill
@@ -299,7 +299,8 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                            "http://image.yes24.com/goods/116208935/XL",
+                          '',
+                            // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
                             fit: BoxFit.fill
@@ -313,7 +314,8 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                            "http://image.yes24.com/goods/116208935/XL",
+                          '',
+                            // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
                             fit: BoxFit.fill
@@ -344,7 +346,8 @@ class _HomeState extends State<Home> {
                   children: <Widget> [
                     GestureDetector(
                       child: Image.network(
-                          "http://image.yes24.com/goods/116208935/XL",
+                        '',
+                        // "http://image.yes24.com/goods/116208935/XL",
                           width: 150,
                           height: 220,
                           fit: BoxFit.fill
@@ -357,7 +360,8 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                            "http://image.yes24.com/goods/116208935/XL",
+                          '',
+                          // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
                             fit: BoxFit.fill
@@ -371,7 +375,8 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                            "http://image.yes24.com/goods/116208935/XL",
+                            "",
+                                // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
                             fit: BoxFit.fill
@@ -402,7 +407,8 @@ class _HomeState extends State<Home> {
                   children: <Widget> [
                     GestureDetector(
                       child: Image.network(
-                          "http://image.yes24.com/goods/116208935/XL",
+                        '',
+                          // "http://image.yes24.com/goods/116208935/XL",
                           width: 150,
                           height: 220,
                           fit: BoxFit.fill
@@ -415,7 +421,8 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                            "http://image.yes24.com/goods/116208935/XL",
+                          '',
+                            // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
                             fit: BoxFit.fill
@@ -429,7 +436,8 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                            "http://image.yes24.com/goods/116208935/XL",
+                          '',
+                            // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
                             fit: BoxFit.fill
