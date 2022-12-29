@@ -33,12 +33,16 @@ class DefaultFirebaseOptions {
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
+
           'you can reconfigure this by running the FlutterFire CLI again.',
+
         );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
+
           'you can reconfigure this by running the FlutterFire CLI again.',
+
         );
       default:
         throw UnsupportedError(
@@ -57,7 +61,6 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-
     apiKey: 'AIzaSyCOaB2vAwPHhZSFwGXgmmxT_RRWMNMqy_Y',
     appId: '1:915730822786:android:75d51c052b00268e0ba69b',
 
@@ -72,6 +75,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '915730822786',
     projectId: 'book-pet-3eec4',
     storageBucket: 'book-pet-3eec4.appspot.com',
+
     iosClientId: '915730822786-2nq51s5ecrqbvsivu69jdvqudprfr6i3.apps.googleusercontent.com',
     iosBundleId: 'com.example.bookPet',
   );
@@ -86,4 +90,3 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.bookPet',
   );
 }
-
