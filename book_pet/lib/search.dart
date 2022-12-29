@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
 
-class SearchPage extends StatefulWidget {
-  final List<String> list = List.generate(10, (index) => "Text $index");
-
-  SearchPage({super.key});
+/// This is the stateful widget that the main application instantiates.
+class MyTextFieldWidget extends StatefulWidget {
+  const MyTextFieldWidget({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<MyTextFieldWidget> createState() => _MyTextFieldWidgetState();
 }
 
-class _HomePageState extends State<SearchPage> {
+/// This is the private State class that goes with MyStatefulWidget.
+class _MyTextFieldWidgetState extends State<MyTextFieldWidget> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,83 +35,41 @@ class _HomePageState extends State<SearchPage> {
             onPressed: () {
             }
         ),
-        actions: <Widget>[
-          IconButton(
-            onPressed: () {
-              showSearch(context: context, delegate: Search(widget.list));
-            },
-            icon: const Icon(Icons.search),
-            color: Colors.black,
+      ),
+      body: Padding(
+        //상하좌우로 띄워주기 (아이콘 왼쪽과 텍스트 필드 오른쪽이 화면 테두리와 조금 떨어져 있다.)
+        padding: const EdgeInsets.all(20),
+        child: TextField(
+          controller: _controller,
+          decoration: InputDecoration(
+            //labelText: '아무거나 입력하세요',
+            //hintText: '???',  //글자를 입력하면 사라진다.
+            //icon: Icon(Icons.android),
+              border: OutlineInputBorder(),
+              contentPadding: EdgeInsets.all(10)
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class Search extends SearchDelegate {
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    return <Widget>[
-      IconButton(
-        icon: const Icon(Icons.close),
-        onPressed: () {
-          query = "";
-        },
-      ),
-    ];
-  }
-
-  @override
-  Widget buildLeading(BuildContext context) {
-    return IconButton(
-      icon: const Icon(Icons.arrow_back),
-      onPressed: () {
-        Navigator.pop(context);
-      },
-    );
-  }
-
-  String selectedResult = "";
-
-  @override
-  Widget buildResults(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(selectedResult),
-      ),
-    );
-  }
-
-  final List<String> listExample;
-  Search(this.listExample);
-
-  List<String> recentList = ["마법천자문","그리스로마신화"];
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    List<String> suggestionList = [];
-    query.isEmpty
-        ? suggestionList = recentList //In the true case
-        : suggestionList.addAll(listExample.where(
-      // In the false case
-          (element) => element.contains(query),
-    ));
-
-    return ListView.builder(
-      itemCount: suggestionList.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(
-            suggestionList[index],
-          ),
-          leading: query.isEmpty ? const Icon(Icons.access_time) : const SizedBox(),
-          onTap: () {
-            selectedResult = suggestionList[index];
-            showResults(context);
+          onSubmitted: (String value) async {
+            await showDialog<void>(
+              context: context,
+              builder: (BuildContext context) {
+                return AlertDialog(
+                  title: const Text('Thanks!'),
+                  content: Text(
+                      'You typed "$value", which has length ${value.characters.length}.'),
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('OK'),
+                    ),
+                  ],
+                );
+              },
+            );
           },
-        );
-      },
+        ),
+      ),
     );
   }
 }
