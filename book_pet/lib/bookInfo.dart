@@ -24,15 +24,15 @@ import 'package:flutter/src/rendering/box.dart';
 //             },
 //           ),
 //         ),
-//         body: const bookMeetingInfo(title: 'Flutter Demo Home Page'),
+
+//         body: const bookInfo(title: 'Flutter Demo Home Page'),
 //       ),
 //     );
 //   }
 // }
 
-
-class BookInfo extends StatefulWidget{
-  const BookInfo({super.key, required this. title});
+class BookInfo extends StatefulWidget {
+  const BookInfo({super.key, required this.title});
 
   final String title;
 
@@ -42,6 +42,7 @@ class BookInfo extends StatefulWidget{
 }
 
 class _BookInfoState extends State<BookInfo>{
+
   @override
   Widget build(BuildContext context) {
     EdgeInsets TopMargin = const EdgeInsets.only(top: 100);
@@ -68,7 +69,7 @@ class _BookInfoState extends State<BookInfo>{
                   height: 180,
                   margin: EdgeInsets.only(left: 10) ,
                   decoration: const BoxDecoration(image: DecorationImage
-                    (image: AssetImage('assets/images/angelique.png'))),
+                    (image: AssetImage('assets/images/Angelique.jpeg'))),
 
                 ),
                 Container(

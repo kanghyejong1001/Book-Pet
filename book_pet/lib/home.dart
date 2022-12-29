@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -6,7 +5,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'menu.dart';
+
 import 'login.dart';
+
 
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 
@@ -16,10 +17,10 @@ class Book{
   Book(this.name);
 }
 
-
 class Home extends StatefulWidget {
   const Home({super.key, required this.title});
   final String title;
+
 
   @override
   State<Home> createState() => _HomeState();
@@ -27,16 +28,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _counter = 0;
-  
+  bool typing = false;
   
   void _incrementCounter() {
     setState(() {
       _counter++;
-      firestore.collection('user').add({
-        'email': "a",
-        'name': "a",
-        'ID': "a",
-      });
     });
   }
 
@@ -62,11 +58,9 @@ class _HomeState extends State<Home> {
   }
 
   TextEditingController controller = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // // appBar: AppBar(
       // //   centerTitle: false,
       // //   // leading widget of appBar: one widget should follow
@@ -240,22 +234,216 @@ class _HomeState extends State<Home> {
       //   },
       // )
       appBar: AppBar(
-        title: Text(widget.title),
+        backgroundColor: Colors.white,
+        title: typing ? const TextBox() : const Text(""),
+        actions: [
+          IconButton (
+            icon: Icon(typing ? Icons.close : Icons.search),
+            color: Colors.black,
+            onPressed: () {
+              setState(() {
+                typing = !typing;
+              });
+            },
+          )
+        ],
+        leading: IconButton(
+            icon: const Icon(Icons.menu),
+            color: Colors.black,
+            onPressed: () {
+            }
+        ),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextButton(
-                child: Text("로그아웃"),
-                onPressed:(){
-                  FirebaseAuth.instance.signOut();
-                }
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget> [
+            const Padding(
+              padding: EdgeInsets.only(top: 12, left: 12),
+              child: Text (
+                "장르별 추천",
+                style: TextStyle (
+                  fontSize: 30,
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 12, left: 20, bottom: 10),
+              child: Text (
+                "SF",
+                style: TextStyle (
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            Padding (
+              padding: const EdgeInsets.only(left: 12),
+              child: SingleChildScrollView (
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget> [
+                    GestureDetector(
+                      child: Image.network(
+                          "http://image.yes24.com/goods/116208935/XL",
+                          width: 150,
+                          height: 220,
+                          fit: BoxFit.fill
+                      ),
+                      onTap:() {
+                        //@ 이미지 클릭
+                      },
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: GestureDetector(
+                        child: Image.network(
+                            "http://image.yes24.com/goods/116208935/XL",
+                            width: 150,
+                            height: 220,
+                            fit: BoxFit.fill
+                        ),
+                        onTap:() {
+                          print("pressed!");
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: GestureDetector(
+                        child: Image.network(
+                            "http://image.yes24.com/goods/116208935/XL",
+                            width: 150,
+                            height: 220,
+                            fit: BoxFit.fill
+                        ),
+                        onTap:() {
+                          print("pressed!");
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 12, left: 20, bottom: 10),
+              child: Text (
+                "액션",
+                style: TextStyle (
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            Padding (
+              padding: const EdgeInsets.only(left: 12),
+              child: SingleChildScrollView (
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget> [
+                    GestureDetector(
+                      child: Image.network(
+                          "http://image.yes24.com/goods/116208935/XL",
+                          width: 150,
+                          height: 220,
+                          fit: BoxFit.fill
+                      ),
+                      onTap:() {
+                        print("pressed!");
+                      },
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: GestureDetector(
+                        child: Image.network(
+                            "http://image.yes24.com/goods/116208935/XL",
+                            width: 150,
+                            height: 220,
+                            fit: BoxFit.fill
+                        ),
+                        onTap:() {
+                          print("pressed!");
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: GestureDetector(
+                        child: Image.network(
+                            "http://image.yes24.com/goods/116208935/XL",
+                            width: 150,
+                            height: 220,
+                            fit: BoxFit.fill
+                        ),
+                        onTap:() {
+                          print("pressed!");
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 12, left: 20, bottom: 10),
+              child: Text (
+                "미스터리",
+                style: TextStyle (
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            Padding (
+              padding: const EdgeInsets.only(left: 12),
+              child: SingleChildScrollView (
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: <Widget> [
+                    GestureDetector(
+                      child: Image.network(
+                          "http://image.yes24.com/goods/116208935/XL",
+                          width: 150,
+                          height: 220,
+                          fit: BoxFit.fill
+                      ),
+                      onTap:() {
+                        print("pressed!");
+                      },
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: GestureDetector(
+                        child: Image.network(
+                            "http://image.yes24.com/goods/116208935/XL",
+                            width: 150,
+                            height: 220,
+                            fit: BoxFit.fill
+                        ),
+                        onTap:() {
+                          print("pressed!");
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: GestureDetector(
+                        child: Image.network(
+                            "http://image.yes24.com/goods/116208935/XL",
+                            width: 150,
+                            height: 220,
+                            fit: BoxFit.fill
+                        ),
+                        onTap:() {
+                          print("pressed!");
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-
+      ),
     );
   }
 
@@ -353,4 +541,28 @@ class _HomeState extends State<Home> {
   //     // This trailing comma makes auto-formatting nicer for build methods.
   //   );
   // }
+}
+
+class TextBox extends StatelessWidget {
+  const TextBox({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.centerLeft,
+      color: Colors.white,
+      child: TextField(
+        decoration: const InputDecoration(
+          //labelText: '아무거나 입력하세요',
+            hintText: '검색하기',  //글자를 입력하면 사라진다.
+            //icon: Icon(Icons.android),
+            border: OutlineInputBorder(),
+            contentPadding: EdgeInsets.all(10)
+        ),
+        onSubmitted: (String value) async {
+          //@ 책 검색
+        },
+      ),
+    );
+  }
 }
