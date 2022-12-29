@@ -1,3 +1,4 @@
+import 'package:book_pet/home.dart';
 import 'package:flutter/material.dart';
 
 class SideMenuItem extends StatelessWidget {
@@ -9,6 +10,18 @@ class SideMenuItem extends StatelessWidget {
   const SideMenuItem({required this.title, required this.icon, required this.onTap, required this.active, Key? key})
       : super(key: key);
 
+
+
+  // leading: IconButton(
+  // icon: const Icon(
+  // Icons.menu,
+  // semanticLabel: 'menu',
+  // ),
+ /* onPressed: (){
+  Navigator.push(context, MaterialPageRoute(builder: (context) => const Login(title: 'login')));
+  },*/
+
+
   @override
   Widget build(BuildContext context) {
     var borderRadius = const BorderRadius.only(topRight: Radius.circular(32), bottomRight: Radius.circular(32));
@@ -16,8 +29,12 @@ class SideMenuItem extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: borderRadius),
       selectedTileColor: Colors.white,
       selected: active,
-      onTap: () {},
-      leading: Icon(
+      onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const Login(title: 'login')));
+      },
+      leading:
+
+      Icon(
         icon,
         color: Colors.black54,
       ),
@@ -77,58 +94,63 @@ class Menu extends StatelessWidget {
 
           children: [
             SideMenuItem(
-              title: '안상준',
+              title: '홍길동',
               icon: Icons.circle,
-              onTap: () { /* react to the tile being tapped */ },
+              onTap: () {  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(title: 'Menu'))); },
               active: true
             ),
                  const Divider(),
             SideMenuItem(
                 title: 'gildong@gmail.com',
                 icon: Icons.circle,
-                onTap: () { /* react to the tile being tapped */ },
+                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu'))); },
                 active: true
             ),
                  const Divider(),
             SideMenuItem(
                 title: '마이 홈',
                 icon: Icons.circle,
-                onTap: () { /* react to the tile being tapped */ },
+                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Home(title: 'Menu'))); },
                 active: true
             ),
                 Column(
-                 children: const [
-                ListTile(
+                 children: [
+                  ListTile(
                   title: Text('마이페이지'),
+                    onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안보임
                     leading: Icon(
                       Icons.arrow_right_rounded,
                       color:Colors.white60,
                     )
                 ),
-                ListTile(
+                  ListTile(
                   title: Text('나의 서재'),
+                  onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안보임
                   leading: Icon(
                     Icons.arrow_right_rounded,
                     color:Colors.white60,
                   )
                 ),
 
-                ListTile(
-                  title: Text('캘린더'),
+                  ListTile(
+                  title: Text('책'),
+                    onTap:() { Navigator.push(context, MaterialPageRoute(builder: (context) => BookList()));},
                     leading: Icon(
                       Icons.arrow_right_rounded,
                       color:Colors.white60,
                     )
                 ),
-                ListTile(
+                  ListTile(
                   title: Text('취향 선택'),
+                    onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => genreChoice(title: 'Menu')));},//근데 안쓴다고 했었나?
                     leading: Icon(
                       Icons.arrow_right_rounded,
                       color:Colors.white60,
                     )
                 ),
-                ListTile(
+                  ListTile(
                   title: Text('북펫'),
+                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안쓴다고 함
                     leading: Icon(
                       Icons.arrow_right_rounded,
                       color:Colors.white60,
@@ -142,13 +164,13 @@ class Menu extends StatelessWidget {
             SideMenuItem(
                 title: '메인 페이지',
                 icon: Icons.circle,
-                onTap: () { /* react to the tile being tapped */ },
+                onTap: () {  Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu'))); },
                 active: true
             ),
             SideMenuItem(
                 title: '모임',
                 icon: Icons.circle,
-                onTap: () { /* react to the tile being tapped */ },
+                onTap: () {  Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu'))); },
                 active: true
             ),
                 const Divider(),

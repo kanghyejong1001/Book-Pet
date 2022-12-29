@@ -28,22 +28,22 @@ Future main() async {
   // runApp(MyApp());
 }
 
-// class MyApp extends StatelessWidget {
-//   static final String title = 'User Profile';
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     final user = UserPreferences.myUser;
-//
-//     return ThemeProvider(
-//       initTheme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
-//       child: Builder(
-//         builder: (context) => MaterialApp(
-//           debugShowCheckedModeBanner: false,
-//           title: title,
-//           home: ProfilePage(),
-//         ),
-//       ),
-//     );
-//   }
-// }
+class MyApp extends StatelessWidget {
+  static final String title = 'User Profile';
+
+  @override
+  Widget build(BuildContext context) {
+    final user = UserPreferences.myUser;
+
+    return ThemeProvider(
+      initTheme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
+      child: Builder(
+        builder: (context) => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: title,
+          home: ProfilePage(),
+        ),
+      ),
+    );
+  }
+}
