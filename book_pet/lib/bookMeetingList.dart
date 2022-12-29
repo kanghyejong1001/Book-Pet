@@ -8,6 +8,9 @@
 //   ]
 // };
 // import 'package:flutter/cupertino.dart';
+import 'package:book_pet/bookInfo.dart';
+import 'package:book_pet/bookMeetingInfo.dart';
+import 'package:book_pet/menu.dart';
 import 'package:flutter/material.dart';
 
 class BookMeetingList extends StatefulWidget {
@@ -39,7 +42,7 @@ class _BookMeetingListState extends State<BookMeetingList> {
         leading: IconButton(
             icon: const Icon(Icons.menu),
             color: Colors.black,
-            onPressed: () {
+            onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));
             }
         ),
       ),
@@ -49,16 +52,16 @@ class _BookMeetingListState extends State<BookMeetingList> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: ElevatedButton (
-                  onPressed: () {
+                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
                     print("pressed");
                   },
-                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                  style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
                   child: Row (
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget> [
                       Image.network("http://image.yes24.com/goods/116208935/XL",
-                        width: 150,
-                        height: 220,
+                        width: 120,
+                        height: 200,
                         fit: BoxFit.fill,
                       ),
                       Padding(
@@ -68,32 +71,48 @@ class _BookMeetingListState extends State<BookMeetingList> {
                           children: const <Widget> [
                             Text (
                               "기욤 뮈소 신작이면 읽어야지\n",
+
                               style: TextStyle (
-                                fontSize: 30,
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
                               ),
                             ),
+
                             Text (
-                              "안젤리크",
+
+                              " 책:   안젤리크",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
                               "방장: 안상준",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "기간: 12.14 ~ 01.19",
+                              "#액션",
                               style: TextStyle (
-                                fontSize: 30,
+                                fontSize: 12,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text (
+                              "\n 기간: 12.14 ~ 01.19",
+                              style: TextStyle (
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
                               '\n  1/10',
-                              
+                              textAlign: TextAlign.right,
                               style: TextStyle (
+                                color: Colors.black,
                                 fontSize: 13,
 
                               ),
@@ -108,16 +127,16 @@ class _BookMeetingListState extends State<BookMeetingList> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: ElevatedButton (
-                  onPressed: () {
+                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
                     print("pressed");
                   },
-                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                  style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
                   child: Row (
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget> [
                       Image.network("http://image.yes24.com/goods/116208935/XL",
-                        width: 150,
-                        height: 220,
+                        width: 120,
+                        height: 200,
                         fit: BoxFit.fill,
                       ),
                       Padding(
@@ -126,33 +145,51 @@ class _BookMeetingListState extends State<BookMeetingList> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const <Widget> [
                             Text (
-                              "안젤리크\n",
+                              "기욤 뮈소 신작이면 읽어야지\n",
+
                               style: TextStyle (
-                                fontSize: 30,
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
+                              ),
+                            ),
+
+                            Text (
+
+                              " 책:   안젤리크",
+                              style: TextStyle (
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "작가 : 기욤 뮈소",
+                              "방장: 안상준",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "장르 : 액션",
+                              "#액션",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 12,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "별점 : ★★★★☆",
+                              "\n 기간: 12.14 ~ 01.19",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                              '\n  1/10',
+                              textAlign: TextAlign.right,
                               style: TextStyle (
+                                color: Colors.black,
                                 fontSize: 13,
+
                               ),
                             ),
                           ],
@@ -165,16 +202,16 @@ class _BookMeetingListState extends State<BookMeetingList> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: ElevatedButton (
-                  onPressed: () {
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
                     print("pressed");
                   },
-                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                  style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
                   child: Row (
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget> [
                       Image.network("http://image.yes24.com/goods/116208935/XL",
-                        width: 150,
-                        height: 220,
+                        width: 120,
+                        height: 200,
                         fit: BoxFit.fill,
                       ),
                       Padding(
@@ -183,33 +220,51 @@ class _BookMeetingListState extends State<BookMeetingList> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const <Widget> [
                             Text (
-                              "안젤리크\n",
+                              "기욤 뮈소 신작이면 읽어야지\n",
+
                               style: TextStyle (
-                                fontSize: 30,
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
+                              ),
+                            ),
+
+                            Text (
+
+                              " 책:   안젤리크",
+                              style: TextStyle (
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "작가 : 기욤 뮈소",
+                              "방장: 안상준",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "장르 : 액션",
+                              "#액션",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 12,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "별점 : ★★★★☆",
+                              "\n 기간: 12.14 ~ 01.19",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                              '\n  1/10',
+                              textAlign: TextAlign.right,
                               style: TextStyle (
+                                color: Colors.black,
                                 fontSize: 13,
+
                               ),
                             ),
                           ],
@@ -222,16 +277,16 @@ class _BookMeetingListState extends State<BookMeetingList> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: ElevatedButton (
-                  onPressed: () {
+                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
                     print("pressed");
                   },
-                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
+                  style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
                   child: Row (
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget> [
                       Image.network("http://image.yes24.com/goods/116208935/XL",
-                        width: 150,
-                        height: 220,
+                        width: 120,
+                        height: 200,
                         fit: BoxFit.fill,
                       ),
                       Padding(
@@ -240,33 +295,51 @@ class _BookMeetingListState extends State<BookMeetingList> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: const <Widget> [
                             Text (
-                              "안젤리크\n",
+                              "기욤 뮈소 신작이면 읽어야지\n",
+
                               style: TextStyle (
-                                fontSize: 30,
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
+                              ),
+                            ),
+
+                            Text (
+
+                              " 책:   안젤리크",
+                              style: TextStyle (
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "작가 : 기욤 뮈소",
+                              "방장: 안상준",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "장르 : 액션",
+                              "#액션",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 12,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              "별점 : ★★★★☆",
+                              "\n 기간: 12.14 ~ 01.19",
                               style: TextStyle (
-                                fontSize: 20,
+                                fontSize: 15,
+                                color: Colors.black,
                               ),
                             ),
                             Text (
-                              '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                              '\n  1/10',
+                              textAlign: TextAlign.right,
                               style: TextStyle (
+                                color: Colors.black,
                                 fontSize: 13,
+
                               ),
                             ),
                           ],

@@ -26,15 +26,15 @@ class MyApp extends StatelessWidget {
             },
           ),
         ),
-        body: const bookMeetingInfo(title: 'Flutter Demo Home Page'),
+        body: const bookInfo(title: 'Flutter Demo Home Page'),
       ),
     );
   }
 }
 
 
-class bookMeetingInfo extends StatefulWidget{
-  const bookMeetingInfo({super.key, required this. title});
+class bookInfo extends StatefulWidget{
+  const bookInfo({super.key, required this. title});
 
   final String title;
 
@@ -43,7 +43,7 @@ class bookMeetingInfo extends StatefulWidget{
 
 }
 
-class _meetingInfoState extends State<bookMeetingInfo>{
+class _meetingInfoState extends State<bookInfo>{
   @override
   Widget build(BuildContext context) {
     EdgeInsets TopMargin = const EdgeInsets.only(top: 100);

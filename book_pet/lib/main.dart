@@ -22,7 +22,7 @@ Future main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  runApp(MyApp());
+  runApp(RunApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -35,22 +35,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-            title: Text('My Book List'),
-            leading: IconButton(
-      icon: const Icon(
-        Icons.menu,
-        semanticLabel: 'menu',
-      ),
-      onPressed: (){
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));
-      },
-        ),
-
-      ),
-        body: bookList(),
-      ),
+      home: BookList(),
+      //home: Scaffold(
+      //   appBar: AppBar(
+      //       title: Text('My Book List'),
+      //       leading: IconButton(
+      // icon: const Icon(
+      //   Icons.menu,
+      //   semanticLabel: 'menu',
+      // ),
+      // onPressed: (){
+      //   // Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));
+      // },
+      //   ),
+      //
+      // ),
+      //   body: bookList(),
+      // ),
     );
   }
 
@@ -61,30 +62,13 @@ class bookList extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final List<BookData> books = [
-      BookData(Image.asset("assets/images/you.png")),
-      BookData(Image.asset("assets/images/christmas.png")),
-      BookData(Image.asset("assets/images/seine.png")),
+
       BookData(Image.asset("assets/images/angelique.png")),
       BookData(Image.asset("assets/images/angelique.png")),
       BookData(Image.asset("assets/images/angelique.png")),
       BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/you.png")),
-      BookData(Image.asset("assets/images/christmas.png")),
-      BookData(Image.asset("assets/images/seine.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/you.png")),
-      BookData(Image.asset("assets/images/christmas.png")),
-      BookData(Image.asset("assets/images/seine.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
-      BookData(Image.asset("assets/images/angelique.png")),
+
+
 
 
     ];
