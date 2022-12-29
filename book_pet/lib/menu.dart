@@ -1,5 +1,10 @@
+
 import 'package:book_pet/home.dart';
 import 'package:flutter/material.dart';
+import 'package:book_pet/profilePage.dart';
+
+import 'bookList.dart';
+import 'login.dart';
 
 class SideMenuItem extends StatelessWidget {
   final String title;
@@ -29,11 +34,8 @@ class SideMenuItem extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: borderRadius),
       selectedTileColor: Colors.white,
       selected: active,
-      onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const Login(title: 'login')));
-      },
+      onTap: onTap,
       leading:
-
       Icon(
         icon,
         color: Colors.black54,
@@ -96,85 +98,98 @@ class Menu extends StatelessWidget {
             SideMenuItem(
               title: '홍길동',
               icon: Icons.circle,
-              onTap: () {  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(title: 'Menu'))); },
+              onTap: () {
+                Navigator.pushNamed(context, '/profile');
+                // Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
+              },
               active: true
             ),
-                 const Divider(),
+                 // const Divider(),
             SideMenuItem(
                 title: 'gildong@gmail.com',
                 icon: Icons.circle,
-                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu'))); },
+                onTap: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
                 active: true
             ),
                  const Divider(),
-            SideMenuItem(
+             SideMenuItem(
                 title: '마이 홈',
                 icon: Icons.circle,
-                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Home(title: 'Menu'))); },
-                active: true
-            ),
-                Column(
-                 children: [
-                  ListTile(
-                  title: Text('마이페이지'),
-                    onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안보임
-                    leading: Icon(
-                      Icons.arrow_right_rounded,
-                      color:Colors.white60,
-                    )
-                ),
-                  ListTile(
-                  title: Text('나의 서재'),
-                  onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안보임
-                  leading: Icon(
-                    Icons.arrow_right_rounded,
-                    color:Colors.white60,
-                  )
-                ),
+                onTap: () {
+                  Column(
+                  children: [
+                    ListTile(
+                        title: Text('마이페이지'),
+                        onTap: () {  Navigator.pushNamed(context, '/bookList');
+                          },
+                        leading: Icon(
+                          Icons.arrow_right_rounded,
+                          color:Colors.white60,
+                        )
+                    ),
+                    ListTile(
+                        title: Text('나의 서재'),
+                        onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안보임
+                        leading: Icon(
+                          Icons.arrow_right_rounded,
+                          color:Colors.white60,
+                        )
+                    ),
 
-                  ListTile(
-                  title: Text('책'),
-                    onTap:() { Navigator.push(context, MaterialPageRoute(builder: (context) => BookList()));},
-                    leading: Icon(
-                      Icons.arrow_right_rounded,
-                      color:Colors.white60,
-                    )
-                ),
-                  ListTile(
-                  title: Text('취향 선택'),
-                    onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => genreChoice(title: 'Menu')));},//근데 안쓴다고 했었나?
-                    leading: Icon(
-                      Icons.arrow_right_rounded,
-                      color:Colors.white60,
-                    )
-                ),
-                  ListTile(
-                  title: Text('북펫'),
-                    onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안쓴다고 함
-                    leading: Icon(
-                      Icons.arrow_right_rounded,
-                      color:Colors.white60,
-                    )
-                ),
+                      ListTile(
+                      title: Text('책'),
+                        onTap:() { Navigator.push(context, MaterialPageRoute(builder: (context) => const BookList()));},
+                        leading: Icon(
+                          Icons.arrow_right_rounded,
+                          color:Colors.white60,
+                        )
+                    ),
+                    //   ListTile(
+                    //   title: Text('취향 선택'),
+                    //     onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => genreChoice(title: 'Menu')));},//근데 안쓴다고 했었나?
+                    //     leading: Icon(
+                    //       Icons.arrow_right_rounded,
+                    //       color:Colors.white60,
+                    //     )
+                    // ),
+                    ListTile(
+                        title: Text('북펫'),
+                        onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));},//안쓴다고 함
+                        leading: Icon(
+                          Icons.arrow_right_rounded,
+                          color:Colors.white60,
+                        )
+                    ),
 
-              ],
-            ),
+                  ],
+                );
 
-                const Divider(),
+                  },
+
+              active: true,),
+          const Divider(),
             SideMenuItem(
                 title: '메인 페이지',
                 icon: Icons.circle,
-                onTap: () {  Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu'))); },
+                onTap: () {
+                  Navigator.pushNamed(context, '/bookList');
+                  },
                 active: true
             ),
+            const Divider(),
             SideMenuItem(
                 title: '모임',
                 icon: Icons.circle,
-                onTap: () {  Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu'))); },
+                onTap: () {
+                  Navigator.pushNamed(context, '/bookList');
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const BookList()));
+                  },
                 active: true
             ),
                 const Divider(),
-          ],
+             ],
         ),
 
              ),

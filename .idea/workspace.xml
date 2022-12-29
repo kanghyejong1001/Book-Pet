@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88971c9d-af0d-4024-b9fd-3479e3717fa0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/book_pet/assets/images/seine.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/ios/Flutter/Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/lib/bookList.dart" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/lib/bookList.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/lib/bookMeetingInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/lib/bookMeetingInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_pet/lib/menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/lib/menu.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_pet/lib/runApp.dart" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/lib/runApp.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book_pet/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_pet/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/book_pet/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +38,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -25,15 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/book_pet" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,5 +75,16 @@
       <updated>1672039040123</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
