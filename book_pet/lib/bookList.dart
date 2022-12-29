@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'bookInfo.dart';
@@ -17,7 +16,11 @@ class _BookListState extends State<BookList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+
+        // title: typing ? TextBox() : const Text(""),
+
         title: typing ? const TextBox() : const Text(""),
+
         actions: [
           IconButton (
             icon: Icon(typing ? Icons.close : Icons.search),
@@ -47,6 +50,7 @@ class _BookListState extends State<BookList> {
                      context,
                      MaterialPageRoute(builder: (context) => const BookInfo(title: '',)),
                    );
+
                  },
                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
                  child: Row (

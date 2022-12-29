@@ -16,10 +16,49 @@ import 'themes.dart';
 import 'package:book_pet/utils/user_preferences.dart';
 
 Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(RunApp());
-
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  return runApp(const RunApp());
+  // await SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  //   DeviceOrientation.portraitDown,
+  // ]);
+  //
+  // runApp(MyApp());
 }
+
+// class MyApp extends StatelessWidget {
+//
+//
+//   const MyApp({super.key});
+//
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//             title: Text('My Book List'),
+//             leading: IconButton(
+//       icon: const Icon(
+//         Icons.menu,
+//         semanticLabel: 'menu',
+//       ),
+//       onPressed: (){
+//         // Navigator.push(context, MaterialPageRoute(builder: (context) => Menu(title: 'Menu')));
+//       },
+//         ),
+//
+//       ),
+//         body: bookList(),
+//       ),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget {
 //
