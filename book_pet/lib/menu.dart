@@ -1,5 +1,34 @@
 import 'package:flutter/material.dart';
 
+class SideMenuItem extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  final GestureTapCallback onTap;
+  final bool active;
+
+  const SideMenuItem({required this.title, required this.icon, required this.onTap, required this.active, Key? key})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var borderRadius = const BorderRadius.only(topRight: Radius.circular(32), bottomRight: Radius.circular(32));
+    return ListTile(
+      shape: RoundedRectangleBorder(borderRadius: borderRadius),
+      selectedTileColor: Colors.white,
+      selected: active,
+      onTap: () {},
+      leading: Icon(
+        icon,
+        color: Colors.black54,
+      ),
+      title: Text(
+        title,
+        style: const TextStyle(color: Colors.black),
+      ),
+    );
+  }
+}
+
 class Menu extends StatelessWidget {
   final String title;
 
@@ -7,7 +36,7 @@ class Menu extends StatelessWidget {
 
   get padding => null;
 
- /* MaterialButton(
+  /* MaterialButton(
   onPressed: () {},
   color: Colors.blue,
   textColor: Colors.white,
@@ -47,43 +76,26 @@ class Menu extends StatelessWidget {
         child: Column(
 
           children: [
-            ListTile(
-
-                  title: const Text(
-                  '안상준',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  ),
-
-                    leading: Icon(
-                Icons.circle,
-                color: Colors.black54,
-                ),
-                 ),
+            SideMenuItem(
+              title: '안상준',
+              icon: Icons.circle,
+              onTap: () { /* react to the tile being tapped */ },
+              active: true
+            ),
                  const Divider(),
-                   ListTile(
-               title: const Text('gildong@gmail.com'),
-               leading: Icon(
-                Icons.circle,
-                color: Colors.black54
-                ,
-               ),
-               ),
+            SideMenuItem(
+                title: 'gildong@gmail.com',
+                icon: Icons.circle,
+                onTap: () { /* react to the tile being tapped */ },
+                active: true
+            ),
                  const Divider(),
-                ListTile(
-                title: const Text(
-                '마이 홈',
-
-                  ),
-
-
-
-                 leading: Icon(
-                Icons.circle,
-                color: Colors.black54
-                ,
-              ),
-
-                  ),
+            SideMenuItem(
+                title: '마이 홈',
+                icon: Icons.circle,
+                onTap: () { /* react to the tile being tapped */ },
+                active: true
+            ),
                 Column(
                  children: const [
                 ListTile(
@@ -127,23 +139,18 @@ class Menu extends StatelessWidget {
             ),
 
                 const Divider(),
-               ListTile(
-              title: const Text('메인 페이지'),
-              leading: Icon(
-                Icons.circle,
-                color: Colors.black54
-                ,
-              ),
-                ),
-                const Divider(),
-                ListTile(
-               title: const Text('모임'),
-               leading: Icon(
-                Icons.circle,
-                color: Colors.black54
-                ,
-                ),
-              ),
+            SideMenuItem(
+                title: '메인 페이지',
+                icon: Icons.circle,
+                onTap: () { /* react to the tile being tapped */ },
+                active: true
+            ),
+            SideMenuItem(
+                title: '모임',
+                icon: Icons.circle,
+                onTap: () { /* react to the tile being tapped */ },
+                active: true
+            ),
                 const Divider(),
           ],
         ),

@@ -12,7 +12,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
+  return runApp(const RunApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -22,6 +23,5 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  return runApp(const RunApp());
 
 }
