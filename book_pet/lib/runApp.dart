@@ -20,7 +20,7 @@ class RunApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Book-Pet',
-      initialRoute: '/menu',
+      initialRoute: '/bookMeetingList',
 
 
 
@@ -34,6 +34,7 @@ class RunApp extends StatelessWidget {
         // '/menu': (BuildContext context) => const Menu(title: 'Book-Pet menu'),
 
         '/bookMeetingList': (BuildContext context) => const BookMeetingList(),
+        '/bookList': (BuildContext context) => const BookList(),
 
       },
       theme: ThemeData(

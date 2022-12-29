@@ -40,20 +40,10 @@ dependencies:
   firebase_auth: ^4.2.3
   flutterfire_ui: ^0.4.3+20
   cloud_firestore: ^4.3.0
-<<<<<<< HEAD
   google_sign_in: ^5.4.2
   animated_theme_switcher: ^2.0.7
 #  firebase_auth: ^0.20.1
 
-=======
-
-#  firebase_auth: ^0.20.1
-
-  google_sign_in: ^5.4.2
-
-  animated_theme_switcher: ^2.0.7
-
->>>>>>> upstream/main
 
 dev_dependencies:
   flutter_test:
