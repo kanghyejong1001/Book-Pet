@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'bookInfo.dart';
+
 class BookList extends StatefulWidget {
   const BookList({super.key});
   @override
-  _HomePageState createState() => _HomePageState();
+  State<StatefulWidget> createState() => _BookListState();
 }
 
-class _HomePageState extends State<BookList> {
+class _BookListState extends State<BookList> {
 
   bool typing = false;
   @override
@@ -14,7 +16,11 @@ class _HomePageState extends State<BookList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: typing ? TextBox() : const Text(""),
+
+        // title: typing ? TextBox() : const Text(""),
+
+        title: typing ? const TextBox() : const Text(""),
+
         actions: [
           IconButton (
             icon: Icon(typing ? Icons.close : Icons.search),
@@ -40,7 +46,11 @@ class _HomePageState extends State<BookList> {
                padding: const EdgeInsets.all(12),
                child: ElevatedButton (
                  onPressed: () {
-                   print("pressed");
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => const BookInfo(title: '',)),
+                   );
+
                  },
                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
                  child: Row (
@@ -272,6 +282,8 @@ class _HomePageState extends State<BookList> {
 }
 
 class TextBox extends StatelessWidget {
+  const TextBox({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -292,3 +304,4 @@ class TextBox extends StatelessWidget {
     );
   }
 }
+
