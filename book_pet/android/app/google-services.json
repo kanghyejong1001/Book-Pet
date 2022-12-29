@@ -40,6 +40,58 @@
           ]
         }
       }
+<<<<<<< HEAD
+=======
+    },
+    {
+      "client_info": {
+
+        "mobilesdk_app_id": "1:915730822786:android:75d51c052b00268e0ba69b",
+        "android_client_info": {
+          "package_name": "com.example.book_pet"
+        }
+      },
+      "oauth_client": [
+        {
+
+          "client_id": "915730822786-ev33tdc8n1re1r274ejltf1h9qaj2004.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.book_pet",
+            "certificate_hash": "f995933dba355798a786ffa970f0a069d0566931"
+          }
+        },
+        {
+
+          "client_id": "915730822786-gaiun1qsjfgmv3hhmt15o5evkubq4ija.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOaB2vAwPHhZSFwGXgmmxT_RRWMNMqy_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915730822786-gaiun1qsjfgmv3hhmt15o5evkubq4ija.apps.googleusercontent.com",
+              "client_type": 3
+
+            },
+            {
+              "client_id": "915730822786-2nq51s5ecrqbvsivu69jdvqudprfr6i3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bookPet"
+              }
+
+            }
+          ]
+        }
+      }
+>>>>>>> upstream/main
     }
   ],
   "configuration_version": "1"
