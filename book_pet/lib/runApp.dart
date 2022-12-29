@@ -10,7 +10,7 @@ class RunApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Book-Pet',
-      initialRoute: '/login',
+      initialRoute: '/',
       routes: {
         '/login': (BuildContext context) => const Login(title: 'Book-Pet'),
 
