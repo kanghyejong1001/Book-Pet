@@ -7,10 +7,9 @@
   "client": [
     {
       "client_info": {
-
-        "mobilesdk_app_id": "1:915730822786:android:f312808113cf42820ba69b",
+        "mobilesdk_app_id": "1:915730822786:android:75d51c052b00268e0ba69b",
         "android_client_info": {
-          "package_name": "com.company"
+          "package_name": "com.example.book_pet"
         }
       },
       "oauth_client": [
@@ -41,6 +40,8 @@
           ]
         }
       }
+<<<<<<< HEAD
+=======
     },
     {
       "client_info": {
@@ -90,6 +91,7 @@
           ]
         }
       }
+>>>>>>> upstream/main
     }
   ],
   "configuration_version": "1"
