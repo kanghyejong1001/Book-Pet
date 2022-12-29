@@ -3,21 +3,17 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'login.dart';
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'menu.dart';
 import 'login.dart';
 
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-class BookList{
+class Book{
   Object? name;
 
-  BookList(this.name);
+  Book(this.name);
 }
 
 
@@ -44,7 +40,7 @@ class _HomeState extends State<Home> {
     });
   }
 
-  Stream<List<BookList>> streamBookList(){
+  Stream<List<Book>> streamBook(){
     try{
       //찾고자 하는 컬렉션의 스냅샷(Stream)을 가져온다.
       final Stream<QuerySnapshot> snapshots = firestore.collection('user').snapshots();
@@ -52,12 +48,12 @@ class _HomeState extends State<Home> {
       //새낭 스냅샷(Stream)내부의 자료들을 List<MessageModel> 로 변환하기 위해 map을 사용하도록 한다.
       //참고로 List.map()도 List 안의 element들을 원하는 형태로 변환하여 새로운 List로 반환한다
       return snapshots.map((querySnapshot){
-        List<BookList> bookList = [];//querySnapshot을 message로 옮기기 위해 List<MessageModel> 선언
+        List<Book> book = [];//querySnapshot을 message로 옮기기 위해 List<MessageModel> 선언
         querySnapshot.docs.forEach((element) { //해당 컬렉션에 존재하는 모든 docs를 순회하며 messages 에 데이터를 추가한다.
-          bookList.add(BookList(element.data()));
+          book.add(Book(element.data()));
 
           });
-        return bookList; //QuerySnapshot에서 List<MessageModel> 로 변경이 됐으니 반환
+        return book; //QuerySnapshot에서 List<MessageModel> 로 변경이 됐으니 반환
       }); //Stream<QuerySnapshot> 에서 Stream<List<MessageModel>>로 변경되어 반환됨
     }catch(ex){//오류 발생 처리
       log('error)',error: ex.toString(),stackTrace: StackTrace.current);
@@ -156,7 +152,7 @@ class _HomeState extends State<Home> {
       //     return ListView(
       //       // snapshot data mapped to list of ListTile
       //       // from List<_JsonQueryDocumentSnapshot> to List<ListTile>
-      //       children: snapshot.data!.docs.map((bookList) {
+      //       children: snapshot.data!.docs.map((book) {
       //         // ListTile widget of each TO-DO item
       //         return ListTile(
       //           contentPadding: const EdgeInsets.all(20.0),
@@ -166,20 +162,20 @@ class _HomeState extends State<Home> {
       //           //   onPressed: () {
       //           //     // whether TO-DO item is done or not would be updated on firebase
       //           //     FirebaseFirestore.instance
-      //           //         .collection('user').doc(bookList.id).update({
-      //           //       'name': !bookList['name'],
+      //           //         .collection('user').doc(book.id).update({
+      //           //       'name': !book['name'],
       //           //     });
       //           //     // recall and rebuild the screen
       //           //     setState(() {});
       //           //   },
       //           //   // according to value of 'done',
       //           //   // icon would be toggled
-      //           //   icon: Icon(bookList['name']
+      //           //   icon: Icon(book['name']
       //           //       ? Icons.check_box
       //           //       : Icons.check_box_outline_blank,
       //           //   ),
       //           // ),
-      //           title: Text(bookList['email'],
+      //           title: Text(book['email'],
       //             style: Theme.of(context).textTheme.titleLarge,
       //           ),
       //           // subtitle: Text(
@@ -191,7 +187,7 @@ class _HomeState extends State<Home> {
       //             children: [
       //               // IconButton(
       //               //   onPressed: () async {
-      //               //     controller.text = bookList['email'];
+      //               //     controller.text = book['email'];
       //               //     // asking TO-DO title dialog is displayed
       //               //     await showDialog(
       //               //       context: context,
@@ -209,7 +205,7 @@ class _HomeState extends State<Home> {
       //               //             onPressed: () {
       //               //               // TO-DO item would be updated on firebase
       //               //               FirebaseFirestore.instance
-      //               //                   .collection('todos').doc(bookList.id).update({
+      //               //                   .collection('todos').doc(book.id).update({
       //               //                 'email': controller.text,
       //               //               });
       //               //               // close the dialog
@@ -230,7 +226,7 @@ class _HomeState extends State<Home> {
       //               //   onPressed: () {
       //               //     // TO-DO item would be deleted on firebase
       //               //     FirebaseFirestore.instance.collection('user')
-      //               //         .doc(bookList.id).delete();
+      //               //         .doc(book.id).delete();
       //               //     // recall and rebuild the screen
       //               //     setState(() {});
       //               //   },
@@ -287,9 +283,9 @@ class _HomeState extends State<Home> {
   //       title: Text(widget.title),
   //     ),
   //     body:
-  //     StreamBuilder<List<BookList>>(
+  //     StreamBuilder<List<Book>>(
   //       // stream: firestore.collection('user').snapshots(),
-  //       stream: streamBookList(),
+  //       stream: streamBook(),
   //       builder: (context, snapshot) {
   //         return Container(
   //           // Center is a layout widget. It takes a single child and positions it

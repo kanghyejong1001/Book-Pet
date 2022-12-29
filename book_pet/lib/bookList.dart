@@ -13,10 +13,10 @@ import 'package:flutter/material.dart';
 class BookList extends StatefulWidget {
   const BookList({super.key});
   @override
-  _HomePageState createState() => _HomePageState();
+  State<StatefulWidget> createState() => _BookListState();
 }
 
-class _HomePageState extends State<BookList> {
+class _BookListState extends State<BookList> {
 
   bool typing = false;
   @override
