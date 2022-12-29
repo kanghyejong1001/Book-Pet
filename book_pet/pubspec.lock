@@ -8,7 +8,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.11"
-
   animated_theme_switcher:
     dependency: "direct main"
     description:
@@ -16,7 +15,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.7"
-
   async:
     dependency: transitive
     description:
@@ -150,7 +148,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
-<<<<<<< HEAD
   firebase_database:
     dependency: transitive
     description:
@@ -186,8 +183,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.3+25"
-=======
->>>>>>> upstream/main
   flutter:
     dependency: "direct main"
     description: flutter
@@ -243,7 +238,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-
   flutterfire_ui:
     dependency: "direct main"
     description:
@@ -251,12 +245,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.3+20"
-
-#    dependency: transitive
-
   google_sign_in:
     dependency: "direct main"
-
     description:
       name: google_sign_in
       url: "https://pub.dartlang.org"
@@ -290,7 +280,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.10.2"
-
   http:
     dependency: transitive
     description:
@@ -298,7 +287,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.13.5"
-
   http_parser:
     dependency: transitive
     description:
@@ -355,7 +343,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.2"
-
   path_drawing:
     dependency: transitive
     description:
@@ -377,7 +364,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.0"
-
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -392,7 +378,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.2.1"
-
   sign_in_with_apple:
     dependency: transitive
     description:
@@ -414,7 +399,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
-
   sky_engine:
     dependency: transitive
     description: flutter
@@ -462,7 +446,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.12"
-
   twitter_login:
     dependency: transitive
     description:
@@ -470,7 +453,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.3"
-
   typed_data:
     dependency: transitive
     description:
@@ -494,7 +476,4 @@ packages:
     version: "6.1.0"
 sdks:
   dart: ">=2.18.6 <3.0.0"
-
   flutter: ">=2.11.0-0.1.pre"
-#  flutter: ">=2.10.0"
-

@@ -1,22 +1,14 @@
-
-// final bookList = {
-//   "list": [
-//     {"image": "assets/images/img_blue.png", "name": "당신, 거기 있어줄래요?"},
-//     {"image": "assets/images/img_mint.png", "name": "센 강의 이름 모를 여인"},
-//     {"image": "assets/images/img_skyblue.png", "name": "안젤리크"},
-//     {"image": "assets/images/img_white.png", "name": "크리스마스 인터네셔널"}
-//   ]
-// };
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'bookInfo.dart';
 
 class BookList extends StatefulWidget {
   const BookList({super.key});
   @override
-  _HomePageState createState() => _HomePageState();
+  State<StatefulWidget> createState() => _BookListState();
 }
 
-class _HomePageState extends State<BookList> {
+class _BookListState extends State<BookList> {
 
   bool typing = false;
   @override
@@ -24,7 +16,7 @@ class _HomePageState extends State<BookList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: typing ? TextBox() : const Text(""),
+        title: typing ? const TextBox() : const Text(""),
         actions: [
           IconButton (
             icon: Icon(typing ? Icons.close : Icons.search),
@@ -50,10 +42,10 @@ class _HomePageState extends State<BookList> {
                padding: const EdgeInsets.all(12),
                child: ElevatedButton (
                  onPressed: () {
-                   // Navigator.push(
-                   //   context,
-                   //   MaterialPageRoute(builder: (context) => const SecondRoute()),
-                   // );
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => const BookInfo(title: '',)),
+                   );
                  },
                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
                  child: Row (
@@ -285,6 +277,8 @@ class _HomePageState extends State<BookList> {
 }
 
 class TextBox extends StatelessWidget {
+  const TextBox({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
