@@ -11,13 +11,15 @@ class RunApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Book-Pet',
-      initialRoute: '/menu',
+      initialRoute: '/',
+
       routes: {
         '/login': (BuildContext context) => const Login(title: 'Book-Pet'),
 
         '/': (BuildContext context) => const Home(title: 'Book-Pet Home Page'),
 
         '/menu':(BuildContext context) => const Menu(title: 'Book-Pet menu')
+
       },
       theme: ThemeData(
         // This is the theme of your application.
