@@ -377,7 +377,6 @@ packages:
       name: quiver
       url: "https://pub.dartlang.org"
     source: hosted
-#    version: "2.1.3"
     version: "3.2.1"
   sign_in_with_apple:
     dependency: transitive

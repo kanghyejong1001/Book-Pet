@@ -2,13 +2,11 @@
 import 'package:flutter/material.dart';
 import 'menu.dart';
 
-class bookMeetingInfo extends StatefulWidget{
-  const bookMeetingInfo({super.key, required this. title});
-
-  final String title;
+class BookMeetingInfo extends StatefulWidget{
+  const BookMeetingInfo({super.key,});
 
   @override
-  State<StatefulWidget> createState() => _meetingInfoState();
+  State<StatefulWidget> createState() => _BookMeetingInfoState();
 
 }
 
@@ -38,7 +36,7 @@ class bookMeetingInfo extends StatefulWidget{
 // }
 
 
-class _meetingInfoState extends State<bookMeetingInfo>{
+class _BookMeetingInfoState extends State<BookMeetingInfo>{
   @override
   Widget build(BuildContext context) {
     EdgeInsets TopMargin = const EdgeInsets.only(top: 100);

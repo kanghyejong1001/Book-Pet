@@ -52,7 +52,8 @@ class _BookMeetingListState extends State<BookMeetingList> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: ElevatedButton (
-                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const BookMeetingInfo()));
                     print("pressed");
                   },
                   style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
@@ -127,7 +128,81 @@ class _BookMeetingListState extends State<BookMeetingList> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: ElevatedButton (
-                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
+                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => const BookMeetingInfo()));
+                    print("pressed");
+                  },
+                  style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
+                  child: Row (
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget> [
+                      Image.network("http://image.yes24.com/goods/116208935/XL",
+                        width: 120,
+                        height: 200,
+                        fit: BoxFit.fill,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column (
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const <Widget> [
+                            Text (
+                              "기욤 뮈소 신작이면 읽어야지\n",
+
+                              style: TextStyle (
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepPurple,
+                              ),
+                            ),
+
+                            Text (
+                              " 책:   안젤리크",
+                              style: TextStyle (
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text (
+                              "방장: 안상준",
+                              style: TextStyle (
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text (
+                              "#액션",
+                              style: TextStyle (
+                                fontSize: 12,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text (
+                              "\n 기간: 12.14 ~ 01.19",
+                              style: TextStyle (
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text (
+                              '\n  1/10',
+                              textAlign: TextAlign.right,
+                              style: TextStyle (
+                                color: Colors.black,
+                                fontSize: 13,
+
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12),
+                child: ElevatedButton (
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const BookMeetingInfo()));
                     print("pressed");
                   },
                   style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
@@ -202,82 +277,7 @@ class _BookMeetingListState extends State<BookMeetingList> {
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: ElevatedButton (
-                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
-                    print("pressed");
-                  },
-                  style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),
-                  child: Row (
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget> [
-                      Image.network("http://image.yes24.com/goods/116208935/XL",
-                        width: 120,
-                        height: 200,
-                        fit: BoxFit.fill,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: Column (
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const <Widget> [
-                            Text (
-                              "기욤 뮈소 신작이면 읽어야지\n",
-
-                              style: TextStyle (
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.deepPurple,
-                              ),
-                            ),
-
-                            Text (
-
-                              " 책:   안젤리크",
-                              style: TextStyle (
-                                fontSize: 15,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Text (
-                              "방장: 안상준",
-                              style: TextStyle (
-                                fontSize: 15,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Text (
-                              "#액션",
-                              style: TextStyle (
-                                fontSize: 12,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Text (
-                              "\n 기간: 12.14 ~ 01.19",
-                              style: TextStyle (
-                                fontSize: 15,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Text (
-                              '\n  1/10',
-                              textAlign: TextAlign.right,
-                              style: TextStyle (
-                                color: Colors.black,
-                                fontSize: 13,
-
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12),
-                child: ElevatedButton (
-                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => bookMeetingInfo(title: 'book meeting info')));
+                  onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => const BookMeetingInfo()));
                     print("pressed");
                   },
                   style: ElevatedButton.styleFrom(primary: Colors.deepPurple.shade100),

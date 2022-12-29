@@ -32,9 +32,7 @@ import 'package:flutter/src/rendering/box.dart';
 // }
 
 class BookInfo extends StatefulWidget {
-  const BookInfo({super.key, required this.title});
-
-  final String title;
+  const BookInfo({super.key,});
 
   @override
   State<StatefulWidget> createState() => _BookInfoState();
