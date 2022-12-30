@@ -1,13 +1,12 @@
+
 import 'package:flutter/material.dart';
 import 'menu.dart';
 
-class bookMeetingInfo extends StatefulWidget{
-  const bookMeetingInfo({super.key, required this. title});
-
-  final String title;
+class BookMeetingInfo extends StatefulWidget{
+  const BookMeetingInfo({super.key,});
 
   @override
-  State<StatefulWidget> createState() => _meetingInfoState();
+  State<StatefulWidget> createState() => _BookMeetingInfoState();
 
 }
 
@@ -37,7 +36,7 @@ class bookMeetingInfo extends StatefulWidget{
 // }
 
 
-class _meetingInfoState extends State<bookMeetingInfo>{
+class _BookMeetingInfoState extends State<BookMeetingInfo>{
   @override
   Widget build(BuildContext context) {
     EdgeInsets TopMargin = const EdgeInsets.only(top: 100);
@@ -51,7 +50,7 @@ class _meetingInfoState extends State<bookMeetingInfo>{
 
 
         decoration: BoxDecoration(
-          color: Colors.purple.shade50,
+          color: Colors.deepPurple.shade50,
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(15.0),
         ),
@@ -98,7 +97,8 @@ class _meetingInfoState extends State<bookMeetingInfo>{
                           height: 70,
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey
+                              color: Colors.grey,
+                             image: DecorationImage(image: AssetImage('assets/images/gildong.png'))
                           ),
                         ),
                         Container(
@@ -117,7 +117,8 @@ class _meetingInfoState extends State<bookMeetingInfo>{
                           height: 70,
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey
+                              color: Colors.grey,
+                              image: DecorationImage(image: AssetImage('assets/images/basic.png'))
                           ),
                         ),
                         Container(
@@ -136,7 +137,8 @@ class _meetingInfoState extends State<bookMeetingInfo>{
                           height: 70,
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey
+                              color: Colors.grey,
+                              image: DecorationImage(image: AssetImage('assets/images/basic.png'))
                           ),
                         ),
                         Container(
@@ -155,7 +157,8 @@ class _meetingInfoState extends State<bookMeetingInfo>{
                           height: 70,
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey
+                              color: Colors.grey,
+                              image: DecorationImage(image: AssetImage('assets/images/basic.png'))
                           ),
                         ),
                         Container(
@@ -173,7 +176,8 @@ class _meetingInfoState extends State<bookMeetingInfo>{
                           height: 70,
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey
+                              color: Colors.grey,
+                              image: DecorationImage(image: AssetImage('assets/images/basic.png'))
                           ),
                         ),
                         Container(

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'bookInfo.dart';
+
 class BookList extends StatefulWidget {
   const BookList({super.key});
   @override
-  _HomePageState createState() => _HomePageState();
+  State<StatefulWidget> createState() => _BookListState();
 }
 
-class _HomePageState extends State<BookList> {
+class _BookListState extends State<BookList> {
 
   bool typing = false;
   @override
@@ -14,7 +16,11 @@ class _HomePageState extends State<BookList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: typing ? TextBox() : const Text(""),
+
+        // title: typing ? TextBox() : const Text(""),
+
+        title: typing ? const TextBox() : const Text(""),
+
         actions: [
           IconButton (
             icon: Icon(typing ? Icons.close : Icons.search),
@@ -30,6 +36,7 @@ class _HomePageState extends State<BookList> {
             icon: const Icon(Icons.menu),
             color: Colors.black,
             onPressed: () {
+              Navigator.pushNamed(context, '/menu');
             }
         ),
       ),
@@ -39,14 +46,12 @@ class _HomePageState extends State<BookList> {
              Padding(
                padding: const EdgeInsets.all(12),
                child: ElevatedButton (
-                 onPressed: () {
-                   print("pressed");
-                 },
+                 onPressed: () {Navigator.of(context, rootNavigator: true).pushNamed('/bookInfo');},
                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
                  child: Row (
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: <Widget> [
-                     Image.network("http://image.yes24.com/goods/116208935/XL",
+                     Image.network("https://contents.kyobobook.co.kr/pdt/9788984374546.jpg",
                        width: 150,
                        height: 220,
                        fit: BoxFit.fill,
@@ -80,12 +85,12 @@ class _HomePageState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )
@@ -137,12 +142,12 @@ class _HomePageState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )
@@ -194,12 +199,12 @@ class _HomePageState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )
@@ -251,12 +256,12 @@ class _HomePageState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )
@@ -272,6 +277,8 @@ class _HomePageState extends State<BookList> {
 }
 
 class TextBox extends StatelessWidget {
+  const TextBox({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -292,3 +299,4 @@ class TextBox extends StatelessWidget {
     );
   }
 }
+

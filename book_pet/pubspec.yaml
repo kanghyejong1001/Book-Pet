@@ -41,20 +41,9 @@ dependencies:
   flutterfire_ui: ^0.4.3+20
   cloud_firestore: ^4.3.0
 
-  firebase_auth: ^4.2.3
   google_sign_in: ^5.4.2
-  firebase_core: ^2.4.0
   animated_theme_switcher: ^2.0.7
-
-  cloud_firestore: ^4.3.0
 #  firebase_auth: ^0.20.1
-
-
-  firebase_auth: ^4.2.3
-  google_sign_in: ^5.4.2
-
-  animated_theme_switcher: ^2.0.7
-
 
 dev_dependencies:
   flutter_test:
@@ -82,18 +71,27 @@ flutter:
 
   assets:
 
-    - assets/images/google_logo.png
-    - assets/images/gildong.png
-    - assets/images/Angelique.jpeg
-    - assets/images/glogo.png
-   - assets/images/you.png
+#   - assets/images/you.png
+#
+#   - assets/images/christmas.png
+
+   - assets/images/angelique.png
+   - assets/images/Angelique.jpeg
+   - assets/images/basic.png
+   - assets/images/gildong.png
    - assets/images/seine.png
-   - assets/images/christmas.png
+   - assets/images/google_logo.png
+   - assets/images/glogo.png
+#  - assets/images/google_logo.png
+#   - assets/images/gildong.png
 
-  # assets:
-  #   - assets/images/abc.png
-
-  #   - images/a_dot_ham.jpeg
+#    - assets/images/google_logo.png
+#    - assets/images/gildong.png
+#    - assets/images/Angelique.jpeg
+#    - assets/images/glogo.png
+#   - assets/images/you.png
+#   - assets/images/seine.png
+#   - assets/images/christmas.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
