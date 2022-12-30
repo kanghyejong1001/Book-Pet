@@ -46,7 +46,7 @@ class _BookListState extends State<BookList> {
              Padding(
                padding: const EdgeInsets.all(12),
                child: ElevatedButton (
-                 onPressed: () => Navigator.pushNamed(context, '/bookInfo'),
+                 onPressed: () {Navigator.of(context, rootNavigator: true).pushNamed('/bookInfo');},
                  style: ElevatedButton.styleFrom(primary: Colors.deepPurpleAccent),
                  child: Row (
                    crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,12 +85,12 @@ class _BookListState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )
@@ -142,12 +142,12 @@ class _BookListState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )
@@ -199,12 +199,12 @@ class _BookListState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )
@@ -256,12 +256,12 @@ class _BookListState extends State<BookList> {
                                fontSize: 20,
                              ),
                            ),
-                           Text (
-                             '\n  "젊다는 것 만큼 외로운 것도 없지."',
-                             style: TextStyle (
-                               fontSize: 13,
-                             ),
-                           ),
+                           // Text (
+                           //   '\n  "젊다는 것 만큼 외로운 것도 없지."',
+                           //   style: TextStyle (
+                           //     fontSize: 13,
+                           //   ),
+                           // ),
                          ],
                        ),
                      )

@@ -72,13 +72,19 @@ flutter:
   assets:
 
 #   - assets/images/you.png
-   - assets/images/seine.png
+#
 #   - assets/images/christmas.png
 
-#   - assets/images/angelique.png
+   - assets/images/angelique.png
+   - assets/images/Angelique.jpeg
+   - assets/images/basic.png
+   - assets/images/gildong.png
+   - assets/images/seine.png
    - assets/images/google_logo.png
+   - assets/images/glogo.png
+#  - assets/images/google_logo.png
 #   - assets/images/gildong.png
-#    - assets/images/Angelique.jpeg
+
 #    - assets/images/google_logo.png
 #    - assets/images/gildong.png
 #    - assets/images/Angelique.jpeg

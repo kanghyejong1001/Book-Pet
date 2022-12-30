@@ -1,3 +1,4 @@
+import 'package:book_pet/bookInfo.dart';
 import 'package:flutter/material.dart';
 
 class MyLibrary extends StatelessWidget {
@@ -56,13 +57,14 @@ class Book extends StatelessWidget {
                         mainAxisSpacing: 4.0),
                     itemBuilder: (BuildContext context, int index) {
                       return IconButton(
-                        onPressed: () {},
+                        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => BookInfo()));
+                        },
                         splashRadius: 100,
                           iconSize: 200,
                         icon:
                         Image.asset("assets/images/angelique.png"),
 
-
+/**/
                         );
 
                     },

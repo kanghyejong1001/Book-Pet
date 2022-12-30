@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+import 'profilePage.dart';
+import 'themes.dart';
+import 'package:book_pet/utils/user_preferences.dart';
 
 
 class SideMenuItem extends StatelessWidget {
@@ -137,7 +141,7 @@ class Menu extends StatelessWidget {
             SideMenuItem(
                 title: '마이페이지',
                 icon: Icons.keyboard_arrow_right_rounded,
-                onTap: () => Navigator.pushNamed(context, '/profile'),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage())),
                 active: true
             ),
 
