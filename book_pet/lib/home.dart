@@ -285,7 +285,7 @@ class _HomeState extends State<Home> {
                   children: <Widget> [
                     GestureDetector(
                       child: Image.network(
-                        '',
+                        'http://image.yes24.com/goods/116208935/XL',
                           // "http://image.yes24.com/goods/116208935/XL",
                           width: 150,
                           height: 220,
@@ -293,13 +293,14 @@ class _HomeState extends State<Home> {
                       ),
                       onTap:() {
                         //@ 이미지 클릭
+                        Navigator.pushNamed(context, '/bookInfo');
                       },
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                          '',
+                          'http://image.yes24.com/goods/116208935/XL',
                             // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
@@ -314,7 +315,7 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                          '',
+                          'http://image.yes24.com/goods/116208935/XL',
                             // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
@@ -346,7 +347,7 @@ class _HomeState extends State<Home> {
                   children: <Widget> [
                     GestureDetector(
                       child: Image.network(
-                        '',
+                        'http://image.yes24.com/goods/116208935/X',
                         // "http://image.yes24.com/goods/116208935/XL",
                           width: 150,
                           height: 220,
@@ -360,7 +361,7 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                          '',
+                          'http://image.yes24.com/goods/116208935/XL',
                           // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
@@ -375,7 +376,7 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                            "",
+                            "http://image.yes24.com/goods/116208935/XL",
                                 // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
@@ -407,7 +408,7 @@ class _HomeState extends State<Home> {
                   children: <Widget> [
                     GestureDetector(
                       child: Image.network(
-                        '',
+                        'http://image.yes24.com/goods/116208935/XL',
                           // "http://image.yes24.com/goods/116208935/XL",
                           width: 150,
                           height: 220,
@@ -421,7 +422,7 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                          '',
+                          'http://image.yes24.com/goods/116208935/XL',
                             // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,
@@ -436,7 +437,7 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(left: 12),
                       child: GestureDetector(
                         child: Image.network(
-                          '',
+                          'http://image.yes24.com/goods/116208935/XL',
                             // "http://image.yes24.com/goods/116208935/XL",
                             width: 150,
                             height: 220,

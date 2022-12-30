@@ -1,3 +1,6 @@
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+import 'package:book_pet/themes.dart';
+import 'package:book_pet/utils/user_preferences.dart';
 import 'package:flutter/material.dart';
 
 import 'menu.dart';
@@ -16,31 +19,36 @@ import 'bookMeetingInfo.dart';
 
 class RunApp extends StatelessWidget {
   const RunApp({Key? key}) : super(key: key);
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Book-Pet',
-      initialRoute: '/',
+    final user = UserPreferences.myUser;
+    return ThemeProvider(
+      initTheme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
+      child: Builder(
+        builder: (context) => MaterialApp(
+          title: 'Book-Pet',
+          initialRoute: '/',
 
-      routes: {
-        '/menu': (BuildContext context) => const Menu(title: 'Menu'),
-        '/': (BuildContext context) => const Home(title: 'Book-Pet Home Page'),
-        '/login': (BuildContext context) => const Login(),
+          routes: {
+            '/menu': (BuildContext context) => const Menu(title: 'Menu'),
+            '/': (BuildContext context) => const Home(title: 'Book-Pet Home Page'),
+            '/login': (BuildContext context) => const Login(),
 
-        '/profile': (BuildContext context) => const ProfilePage(),
-        '/myLibrary': (BuildContext context) => const MyLibrary(),
+            '/profile': (BuildContext context) => const ProfilePage(),
+            '/myLibrary': (BuildContext context) => const MyLibrary(),
 
-        '/bookList': (BuildContext context) => const BookList(),
-        '/bookInfo': (BuildContext context) => const BookInfo(),
+            '/bookList': (BuildContext context) => const BookList(),
+            '/bookInfo': (BuildContext context) => const BookInfo(),
 
-        '/bookMeetingList': (BuildContext context) => const BookMeetingList(),
-        '/bookMeetingInfo': (BuildContext context) => const BookMeetingInfo(),
+            '/bookMeetingList': (BuildContext context) => const BookMeetingList(),
+            '/bookMeetingInfo': (BuildContext context) => const BookMeetingInfo(),
 
-      },
-      theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+          },
+          theme: ThemeData(
+            primarySwatch: Colors.lightGreen,
+          ),
+        ),
       ),
     );
   }

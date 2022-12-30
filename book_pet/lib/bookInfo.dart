@@ -35,7 +35,7 @@ class BookInfo extends StatefulWidget {
   const BookInfo({super.key,});
 
   @override
-  State<StatefulWidget> createState() => _BookInfoState();
+  _BookInfoState createState() => _BookInfoState();
 
 }
 
